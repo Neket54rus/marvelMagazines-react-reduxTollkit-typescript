@@ -1,5 +1,14 @@
 import React from "react"
 
+import { RandomChar, Chars } from "../components"
+import visionBg from "../assets/img/vision.png"
+
 export const Home: React.FunctionComponent = () => {
-	return <h1>Marvel magazines</h1>
+	return (
+		<>
+			<RandomChar />
+			<Chars />
+			<img className="bg__decoration" src={visionBg} alt="vision" />
+		</>
+	)
 }

@@ -1,1 +1,6 @@
 export * from "./App"
+export * from "./Header"
+export * from "./RandomChar"
+export * from "./Chars"
+export * from "./CharList"
+export * from "./CharInfo"
