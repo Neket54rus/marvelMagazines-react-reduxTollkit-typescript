@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink, Link } from "react-router-dom"
 
 import styles from "./Header.module.scss"
 
@@ -6,19 +7,29 @@ export const Header: React.FunctionComponent = () => {
 	return (
 		<header className={styles.header}>
 			<h1 className={styles.title}>
-				<a href="/">
+				<Link to="/">
 					<span>Marvel</span>
 					information portal
-				</a>
+				</Link>
 			</h1>
 			<nav className={styles.menu}>
 				<ul>
 					<li>
-						<a href="/">Characters</a>
+						<NavLink
+							style={({ isActive }) => ({ color: isActive ? "#9f0013" : "inherit" })}
+							to="/"
+						>
+							Characters
+						</NavLink>
 					</li>
 					/
 					<li>
-						<a href="/">Comics</a>
+						<NavLink
+							style={({ isActive }) => ({ color: isActive ? "#9f0013" : "inherit" })}
+							to="/comics"
+						>
+							Comics
+						</NavLink>
 					</li>
 				</ul>
 			</nav>
